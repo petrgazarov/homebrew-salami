@@ -8,6 +8,11 @@ Adding this tap is as easy as:
 
 ```bash
 brew tap petrgazarov/salami
+```
+
+Then you can install Salami with:
+
+```bash
 brew install salami
 ```
 
