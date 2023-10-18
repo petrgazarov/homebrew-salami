@@ -1,6 +1,6 @@
 # Salami homebrew tap
 
-This repo is a [tap](https://docs.brew.sh/Taps) for Salami CLI utility and compiler.
+This repo is a [tap](https://docs.brew.sh/Taps) for Salami CLI.
 
 ## Usage
 
