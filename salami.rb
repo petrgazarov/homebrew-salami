@@ -10,12 +10,12 @@ class Salami < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-x64"
-      sha256 "04af4e3595bbf396ab173c47de433e917db506bf296da013f6dd0fd0727bd4a2"
+      sha256 "613b0e949f85f67b0b6f3d07c0b41cb33d2cd0eed8b34e1bcda3498d510f7656"
     end
 
     if Hardware::CPU.arm?
       url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-arm64"
-      sha256 "cd910faa833e1eb3aa05e740ffb8a30228203c49b8d417237ddb19100bab2c3c"
+      sha256 "e2a3b5b6cf6de0b61cadc71bb97161cd9a0a355942d3648143726fdbea4d236f"
     end
 
     def install
@@ -34,12 +34,12 @@ class Salami < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-arm64"
-      sha256 "92fa5d9fb525b6bae3eeebf2cb6a75bd8ae6fe411d141ad5b4112dbd8a4aff7b"
+      sha256 "41390ec512fcbc57cb5aca05303c66ed81c5abaf53dea33fe838661d0c58443f"
     end
 
     if Hardware::CPU.intel?
       url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-x64"
-      sha256 "70b54d0c9a241074af4026bb1dacbda9ee01d3fd7810f675f9734b670924146e"
+      sha256 "4e6da2da5cc49190617644a7af571e515c48eaee9984b342c4de14a4fa6b9898"
     end
 
     def install
