@@ -4,28 +4,28 @@
 class Salami < Formula
   desc "Salami - Infrastructure as Natural Language"
   homepage "https://github.com/petrgazarov/salami"
-  version ""
+  version "0.0.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url ""
-      sha256 ""
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-x64"
+      sha256 "691c8b0313bbf950a3f687ab8c6d4dac993070c74c3a67a226743250e2b901b3"
     end
 
     if Hardware::CPU.arm?
-      url ""
-      sha256 ""
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-arm64"
+      sha256 "c621b89bba11fea88e5576e49f7557fb953d7a35942b267ee0e95628157eb258"
     end
 
     def install
       if Hardware::CPU.intel?
-        filename = File.basename("")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-x64")
         bin.install filename => "salami"
       end
 
       if Hardware::CPU.arm?
-        filename = File.basename("")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-arm64")
         bin.install filename => "salami"
       end
     end
@@ -33,23 +33,23 @@ class Salami < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url ""
-      sha256 ""
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-arm64"
+      sha256 "6d2aa78bcb37ff9315feefcdbfcffa077cda2f33ea6738aef59f51edb34d02bc"
     end
 
     if Hardware::CPU.intel?
-      url ""
-      sha256 ""
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-x64"
+      sha256 "3994ae18be0fd512be0f074dc7bd3d67a54db31fc70c715bbcd30eff875010b7"
     end
 
     def install
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-        filename = File.basename("")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-arm64")
         bin.install filename => "salami"
       end
 
       if Hardware::CPU.intel?
-        filename = File.basename("")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-x64")
         bin.install filename => "salami"
       end
     end
