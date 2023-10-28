@@ -4,28 +4,28 @@
 class Salami < Formula
   desc "Salami - Infrastructure as Natural Language"
   homepage "https://github.com/petrgazarov/salami"
-  version "0.0.2"
+  version "0.0.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-x64"
-      sha256 "613b0e949f85f67b0b6f3d07c0b41cb33d2cd0eed8b34e1bcda3498d510f7656"
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-darwin-x64"
+      sha256 "0ccccb6abd66955a7e73281f0a3cdd2757fb8e83023cfe9ffff280a2ff47031b"
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-arm64"
-      sha256 "e2a3b5b6cf6de0b61cadc71bb97161cd9a0a355942d3648143726fdbea4d236f"
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-darwin-arm64"
+      sha256 "ba7969371fc7403a9a11081ff269f6216f574ecc0093e5e3f90a09fc5214cb23"
     end
 
     def install
       if Hardware::CPU.intel?
-        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-x64")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-darwin-x64")
         bin.install filename => "salami"
       end
 
       if Hardware::CPU.arm?
-        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-darwin-arm64")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-darwin-arm64")
         bin.install filename => "salami"
       end
     end
@@ -33,23 +33,23 @@ class Salami < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-arm64"
-      sha256 "41390ec512fcbc57cb5aca05303c66ed81c5abaf53dea33fe838661d0c58443f"
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-linux-arm64"
+      sha256 "144889a2bf14bc51425a1e4d4a4996cbb597a18adf285cd1685c1ef527c2fd2d"
     end
 
     if Hardware::CPU.intel?
-      url "https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-x64"
-      sha256 "4e6da2da5cc49190617644a7af571e515c48eaee9984b342c4de14a4fa6b9898"
+      url "https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-linux-x64"
+      sha256 "22ad02c311fbc2abd98ff6c2200ed8929d5550528b62b5f3c298cddb0ec7b255"
     end
 
     def install
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-arm64")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-linux-arm64")
         bin.install filename => "salami"
       end
 
       if Hardware::CPU.intel?
-        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.2/salami-0.0.2-linux-x64")
+        filename = File.basename("https://github.com/petrgazarov/salami/releases/download/0.0.3/salami-0.0.3-linux-x64")
         bin.install filename => "salami"
       end
     end
